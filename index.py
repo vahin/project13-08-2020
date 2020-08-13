@@ -1,8 +1,8 @@
-import math, csv
+import math
+from csv import reader
 
 with open("stdDev.csv", newline="") as f:
-    reader = csv.reader(f)
-    file_data = list(reader)
+    file_data = list(reader(f))
 
 file_data.pop(0)
 
