@@ -7,17 +7,14 @@ with open("stdDev.csv", newline="") as f:
 file_data.pop(0)
 
 total = 0
-n = len(file_data)
 for x in file_data:
     total += int(x[0])
 
-mean = total/n
+mean = total/len(file_data)
 
 squaredList = []
 for number in file_data:
-    a = int(number[0])-mean
-    a = a**2
-    squaredList.append(a)
+    squaredList.append((int(number[0])-mean)**2)
 
 sum = 0
 for i in squaredList:
